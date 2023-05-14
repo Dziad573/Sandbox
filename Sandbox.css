@@ -4,28 +4,50 @@ body{
     min-height: 100%;
     background-color: rgb(22, 22, 22);
     margin: 0;
+    font-family: monospace;
+    color: white;
 }
 #container{
     justify-content: center;
     display: flex;
-    flex-wrap: nowrap;
     flex-direction: row;
     width: 100%;
-
+    margin-top: 5%;
+    
+}
+#test1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+}
+#pozycjaKursora{
+    min-height: 150px;
+    max-height: 150px;
+}
+#licznikX, #licznikY{
+    width: 100px;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    margin: 5px;
+    font-size: 20px;
+}
+.pozycja{
+    margin-top: 10px;
 }
 #bagno{
+    min-width: 200px;
+    max-width: 600px;
+    padding: 50px;
+    font-size: 30px;
+}
+.box{
     text-align: center;
     justify-content: center;
-    height: auto;
-    width: 600px;
-    padding-top: 50px;
-    padding-bottom: 50px;
     border: 2px solid white;
-    font-family: monospace;
-    font-size: 30px;
-    color: white;
-
+    margin: 5px;
 }
+
 .zmienColor{
     color: red;
 }
