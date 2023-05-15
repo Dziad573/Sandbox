@@ -15,11 +15,18 @@ function powiekszCzcionke (){
     this.style.fontSize = (5+fontSize) + "px";
 };
 
-function wykonaj(event){
+function zlicz(event){
     var tmp = document.getElementById("licznikX");  // POZYCJA KURSORA
     tmp.innerHTML = event.clientX;
     var tmp2 = document.getElementById("licznikY");  // POZYCJA KURSORA
     tmp2.innerHTML = event.clientY;
+};
+
+function okresl(eve, eveObj){
+    var e = eve || window.eve;
+    var srcElement = e.target || e.srcElement;
+    var wynik = document.getElementById("wynik");
+    wynik.innerHTML = "źródło eventu " + srcElement.tagName + "<br>event przypisany do tagu: " + eveObj.tagName;
 };
 
 window.onload = function(){
@@ -37,7 +44,27 @@ window.onload = function(){
     // #################################### //
 
     var pozycja = document;
-    pozycja.onmousemove = wykonaj;
+    pozycja.onmousemove = zlicz;
 
+    var test3 = document.getElementById("test3");
+    var przycisk = document.getElementById("przycisk");
+    var lorem = document.getElementById("lorem");
+
+    test3.onmousemove = function(eve){
+        okresl(eve, this);
+    };
+    przycisk.onclick = function(eve){
+        alert("przycisk");
+        okresl(eve, this);
+    };
+    lorem.onclick = function(eve){
+        var e = eve || window.eve;
+        if (e.stopPropagation)
+            e.stopPropagation();
+        else
+            e = true;
+        alert("Lorem ipsum");
+        eve.stopPropagation();
+    };
 
 }

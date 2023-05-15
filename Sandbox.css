@@ -8,18 +8,25 @@ body{
     color: white;
 }
 #container{
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
     width: 100%;
-    margin-top: 5%;
+    margin-top: 5vh;
+    font-size: 20px;
     
 }
-#test1{
+.test1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: auto;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+.box{
+    text-align: center;
+    justify-content: center;
+    border: 2px solid white;
+    margin: 5px;
 }
 #pozycjaKursora{
     min-height: 150px;
@@ -30,10 +37,10 @@ body{
     padding-bottom: 10px;
     padding-top: 5px;
     margin: 5px;
-    font-size: 20px;
 }
 .pozycja{
     margin-top: 10px;
+    font-size: 15px;
 }
 #bagno{
     min-width: 200px;
@@ -41,13 +48,17 @@ body{
     padding: 50px;
     font-size: 30px;
 }
-.box{
-    text-align: center;
-    justify-content: center;
-    border: 2px solid white;
-    margin: 5px;
+#test2{
+    margin-top: 10vh;
 }
-
-.zmienColor{
-    color: red;
+#test2 > #test3 > footer,header,button{
+    padding: 2px 8px 2px 8px;
+}
+#test3{
+    width: auto;
+}
+#wynik{
+    margin-top: 2vh;
+    text-align: center;
+    width: 100%;
 }
