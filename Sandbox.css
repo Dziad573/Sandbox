@@ -61,4 +61,33 @@ body{
     margin-top: 2vh;
     text-align: center;
     width: 100%;
+    min-height: 50px;
+}
+#test4{
+    width: 100%;
+    margin-top: 15vh;
+}
+#box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 80px;
+    min-height: 612px;
+    min-width: 612px;
+    max-height: 612px;
+    max-width: 612px;
+    text-align: center;
+    justify-content: center;
+    border: 5px solid white;
+}
+#box > div{
+    min-height: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    max-width: 200px;
+    border: 2px solid white;
+
+}
+#img1, #img2, #img3, #img4, #img5, #img6{
+    position: absolute;
 }
