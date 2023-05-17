@@ -1,0 +1,35 @@
+body{
+    box-sizing: border-box;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-color: rgb(22, 22, 22);
+    margin: 0;
+    font-family: monospace;
+    color: white;
+}
+#container{
+    width: 100%;
+}
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid white;
+    width: auto;
+    height: 60px;
+    font-size: 15px;
+    margin-top: 5vh;
+    padding: 20px;
+}
+.box > input {
+    margin: 0 2px 0 2px;
+}
+#valueInput{
+    text-align: center;
+}
+#result{
+    text-align: center;
+    margin-left: 15px;
+    padding: 16px;
+    font-size: 20px;
+}
