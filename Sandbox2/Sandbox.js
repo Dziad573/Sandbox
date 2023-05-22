@@ -37,4 +37,25 @@ window.onload = function (){
         clearInterval(countdown);
         result.innerHTML = "0";
     };
+
+    var mainImage = document.getElementById("main");
+    var image = new Image();
+
+    mainImage.appendChild(image);
+    var mins = document.getElementsByClassName("pic");
+    var currentMin = mins[0];
+    
+    image.src = currentMin.getAttribute("src");
+
+    
+    for(var i = 0; i < mins.length; i++){
+        mins[i].onmouseover = function(){
+            /*if(currentMin === mins[0]){
+                currentMin.className += "current";
+            }else{
+                currentMin.className -= "current";
+            };*/
+            image.src = this.getAttribute("src");
+        };
+    };
 };
