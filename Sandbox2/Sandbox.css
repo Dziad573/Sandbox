@@ -14,7 +14,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 2px solid white;
+    /*border: 2px solid white;*/
     width: auto;
     height: auto;
     font-size: 15px;
@@ -50,8 +50,8 @@ body{
     height: 50px;
 }
 .pic:hover{
-    border-bottom: 1px solid red;
-    margin-bottom: -1px;
+    border-bottom: 2px solid red;
+    margin-bottom: -2px;
 }
 #main{
     width: 600px;
@@ -59,8 +59,10 @@ body{
     margin-top: 50px;
     margin-bottom: 50px;
 }
+#main > img{
+    border-radius: 5%;
+}
 .current{
     border-bottom: 1px solid red;
-    margin-bottom: -1px;
 }
 
