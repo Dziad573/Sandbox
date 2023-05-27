@@ -38,11 +38,6 @@
             }
         }
     )
-    var a = 5;
-    var b = 12;
-    var c = 1.161;    
-    console.log(Math.max(a, b, c));
-    console.log(Math.floor(c));
 
     $("#losuj").click(
         function(){
