@@ -50,7 +50,6 @@
                 return wylosowanaLiczba;
         }
             var wylosowana = losujLiczbe(min, max);
-            console.log(wylosowana);
 
             $('#result').text('Wylosowana liczba: ' + wylosowana); 
             e.preventDefault();
