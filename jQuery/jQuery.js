@@ -20,7 +20,7 @@
     $("#test div:nth-child(5)").css({
         "border": "5px solid blue", 
         "width": "200px",
-        "backgroundColor": "pink"
+        "backgroundColor": "pink",
     });
     
     $("#wynik").text("Zaznaczone: 0");
