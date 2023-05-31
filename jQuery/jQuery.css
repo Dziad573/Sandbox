@@ -12,7 +12,7 @@ body{
     min-height: 100vh;
     width: 100%;
 }
-#test, #form, #rand, #result{
+#test, #form, #rand, #result, #drag{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -43,4 +43,9 @@ body{
 #rand > input, #rand > div{
     text-align: center;
     margin: 10px;
+}
+#dropzone{
+    min-width: 200px;
+    min-height: 200px;
+    border: 1px solid white;
 }

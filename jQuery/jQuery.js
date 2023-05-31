@@ -1,3 +1,13 @@
+    function dragstart(event){
+        event.dataTransfer.setData("id", event.target.id);
+    };
+    function dragover(event){
+        event.preventDefault();
+    };
+    function drop(event){
+        event.preventDefault();
+        event.target.appendChild(document.getElementById("imgdrop"));
+    };
 
     $(document).ready(function() {
     $("div#a").css("color", "blue");
@@ -55,6 +65,6 @@
             e.preventDefault();
             }
     )
-
+    
 });
 
