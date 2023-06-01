@@ -44,8 +44,40 @@ body{
     text-align: center;
     margin: 10px;
 }
+#losuj:hover{
+    animation-name: scale;
+    animation-duration: 1000ms;
+    animation-fill-mode:forwards;
+}
+@keyframes scale{
+    from{
+        scale: 1;
+    }to{
+        scale: 1.1;
+        rotate: 6deg;
+        transform: translateX(3px);
+        transform: translateY(-3px);
+    }
+}
 #dropzone{
     min-width: 200px;
     min-height: 200px;
     border: 1px solid white;
+}
+#test2{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+}
+#test3{
+    transform: rotateX(20deg);
+    box-shadow: 5px 12px 12px 5px black;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    background: rgb(24,24,24);
+    background: linear-gradient(0deg, rgba(24,24,24,1) 0%, rgba(120,120,126,1) 100%);
 }
