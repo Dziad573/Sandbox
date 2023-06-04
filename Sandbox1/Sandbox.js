@@ -67,7 +67,6 @@ window.onload = function(){
         eve.stopPropagation();
     };
 
-
     var img1 = document.querySelector("#img1");
 
     img1.onmousedown = function(){
@@ -95,66 +94,6 @@ window.onload = function(){
         this.onmousemove = null;
     };
     img2.ondragstart = function(ev){
-        ev.preventDefault();
-    };
-
-    var img3 = document.querySelector("#img3");
-
-    img3.onmousedown = function(){
-        img3.onmousemove = function(ev){
-            this.style.left = ev.clientX - this.width / 2 + "px";
-            this.style.top = ev.clientY - this.height / 2 + "px";
-        };
-    };
-    img3.onmouseup = function(){
-        this.onmousemove = null;
-    };
-    img3.ondragstart = function(ev){
-        ev.preventDefault();
-    };
-
-    var img4 = document.querySelector("#img4");
-
-    img4.onmousedown = function(){
-        img4.onmousemove = function(ev){
-            this.style.left = ev.clientX - this.width / 2 + "px";
-            this.style.top = ev.clientY - this.height / 2 + "px";
-        };
-    };
-    img4.onmouseup = function(){
-        this.onmousemove = null;
-    };
-    img4.ondragstart = function(ev){
-        ev.preventDefault();
-    };
-
-    var img5 = document.querySelector("#img5");
-
-    img5.onmousedown = function(){
-        img5.onmousemove = function(ev){
-            this.style.left = ev.clientX - this.width / 2 + "px";
-            this.style.top = ev.clientY - this.height / 2 + "px";
-        };
-    };
-    img5.onmouseup = function(){
-        this.onmousemove = null;
-    };
-    img5.ondragstart = function(ev){
-        ev.preventDefault();
-    };
-
-    var img6 = document.querySelector("#img6");
-
-    img6.onmousedown = function(){
-        img6.onmousemove = function(ev){
-            this.style.left = ev.clientX - this.width / 2 + "px";
-            this.style.top = ev.clientY - this.height / 2 + "px";
-        };
-    };
-    img6.onmouseup = function(){
-        this.onmousemove = null;
-    };
-    img6.ondragstart = function(ev){
         ev.preventDefault();
     }
 };
