@@ -102,69 +102,59 @@ button {
     cursor: pointer;
     font-weight: bold;
 }
-
 button:hover {
-box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
-transition-delay: 0.6s;
+    box-shadow: 0 0 10px #ae00ff, 0 0 25px #001eff, 0 0 50px #ae00ff;
+    transition-delay: 0.6s;
 }
-
 button span {
-position: absolute;
+    position: absolute;
 }
-
 button span:nth-child(1) {
-top: 0;
-left: -100%;
-width: 100%;
-height: 2px;
-background: linear-gradient(90deg, transparent, #ae00ff);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ae00ff);
 }
-
 button:hover span:nth-child(1) {
-left: 100%;
-transition: 0.7s;
+    left: 100%;
+    transition: 0.7s;
 }
-
 button span:nth-child(3) {
-bottom: 0;
-right: -100%;
-width: 100%;
-height: 2px;
-background: linear-gradient(90deg, transparent, #001eff);
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #001eff);
 }
-
 button:hover span:nth-child(3) {
-right: 100%;
-transition: 0.7s;
-transition-delay: 0.35s;
+    right: 100%;
+    transition: 0.7s;
+    transition-delay: 0.35s;
 }
-
 button span:nth-child(2) {
-top: -100%;
-right: 0;
-width: 2px;
-height: 100%;
-background: linear-gradient(180deg, transparent, #ae00ff);
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ae00ff);
 }
-
 button:hover span:nth-child(2) {
-top: 100%;
-transition: 0.7s;
-transition-delay: 0.17s;
+    top: 100%;
+    transition: 0.7s;
+    transition-delay: 0.17s;
 }
-
 button span:nth-child(4) {
-bottom: -100%;
-left: 0;
-width: 2px;
-height: 100%;
-background: linear-gradient(360deg, transparent, #001eff);
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #001eff);
 }
-
 button:hover span:nth-child(4) {
-bottom: 100%;
-transition: 0.7s;
-transition-delay: 0.52s;
+    bottom: 100%;
+    transition: 0.7s;
+    transition-delay: 0.52s;
 }
 
 /*button:active {
@@ -249,4 +239,28 @@ transition-delay: none;
 }
 #checkbox:checked + .switch .powersign::before {
     background-color: rgb(146, 180, 184);
+}
+
+a>span{
+    position: relative;
+}
+a>span::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 25%;
+    background-color: rgb(231, 222, 193);
+    box-shadow: 0px 0px 7px 2px rgb(231, 222, 193);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+a>span:hover::before{
+    transform: scaleX(1);
+}
+a, a:visited, a:hover{
+    text-decoration: none;
+    color: rgb(231, 222, 193);
 }
