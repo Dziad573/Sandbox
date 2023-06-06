@@ -21,6 +21,7 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    margin-bottom: 40px;
     width: 100%;
 }
 .box{
@@ -158,19 +159,19 @@ button:hover span:nth-child(4) {
 }
 
 /*button:active {
-background: #ae00af;
-background: linear-gradient(to top right, #ae00af, #001eff);
-color: #bfbfbf;
-box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
-transition: 0.1s;
+    background: #ae00af;
+    background: linear-gradient(to top right, #ae00af, #001eff);
+    color: #bfbfbf;
+    box-shadow: 0 0 8px #ae00ff, 0 0 8px #001eff, 0 0 8px #ae00ff;
+    transition: 0.1s;
 }
 
 button:active span:nth-child(1) 
-span:nth-child(2) 
-span:nth-child(2) 
-span:nth-child(2) {
-transition: none;
-transition-delay: none;
+    span:nth-child(2) 
+    span:nth-child(2) 
+    span:nth-child(2) {
+    transition: none;
+    transition-delay: none;
 }*/
 
 #checkbox {
@@ -239,28 +240,4 @@ transition-delay: none;
 }
 #checkbox:checked + .switch .powersign::before {
     background-color: rgb(146, 180, 184);
-}
-
-a>span{
-    position: relative;
-}
-a>span::before{
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    border-radius: 25%;
-    background-color: rgb(231, 222, 193);
-    box-shadow: 0px 0px 7px 2px rgb(231, 222, 193);
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
-}
-a>span:hover::before{
-    transform: scaleX(1);
-}
-a, a:visited, a:hover{
-    text-decoration: none;
-    color: rgb(231, 222, 193);
 }
