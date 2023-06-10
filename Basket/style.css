@@ -1,0 +1,48 @@
+*{
+    scroll-behavior: smooth;
+}
+body, html{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='1024' preserveAspectRatio='none' viewBox='0 0 1440 1024'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1074%26quot%3b)' fill='none'%3e%3crect width='1440' height='1024' x='0' y='0' fill='rgba(21%2c 67%2c 96%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c583.855C109.627%2c588.56%2c224.691%2c547.4%2c301.317%2c468.859C373.406%2c394.969%2c359.018%2c277.062%2c394.053%2c179.958C425.376%2c93.141%2c489.893%2c20.732%2c496.22%2c-71.346C503.446%2c-176.504%2c491.799%2c-287.555%2c432.151%2c-374.461C369.668%2c-465.498%2c269.101%2c-524.56%2c163.352%2c-556.327C57.206%2c-588.213%2c-61.786%2c-599.558%2c-162.393%2c-553.061C-258.654%2c-508.572%2c-313.05%2c-407.706%2c-361.888%2c-313.578C-402.569%2c-235.172%2c-393.752%2c-145.015%2c-418.153%2c-60.121C-447.737%2c42.808%2c-547.653%2c134.072%2c-520.316%2c237.62C-493.161%2c340.479%2c-373.709%2c384.756%2c-285.143%2c443.691C-195.147%2c503.577%2c-108.001%2c579.22%2c0%2c583.855' fill='%230f2e42'%3e%3c/path%3e%3cpath d='M1440 1485.1109999999999C1540.436 1486.551 1650.1100000000001 1536.716 1735.23 1483.387 1820.384 1430.036 1825.887 1310.674 1865.69 1218.406 1904.513 1128.412 1971.0819999999999 1046.249 1966.033 948.3679999999999 1960.809 847.087 1902.621 757.298 1837.879 679.236 1772.098 599.921 1693.726 525.437 1593.942 499.72299999999996 1495.509 474.35699999999997 1395.497 511.63800000000003 1297.911 540.0889999999999 1200.144 568.592 1084.205 581.707 1026.031 665.293 968.331 748.198 1014.119 860.844 1004.679 961.41 995.837 1055.601 946.5260000000001 1146.563 972.31 1237.587 999.816 1334.69 1060.961 1427.787 1150.162 1474.997 1237.371 1521.152 1341.34 1483.696 1440 1485.1109999999999' fill='%231c587e'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1074'%3e%3crect width='1440' height='1024' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin: 0px auto;
+    min-height: 100vh;
+    background-color: black;
+    color: whitesmoke;
+}
+#header{
+    text-align: center;
+    padding: 1em;
+    position: relative;
+}
+#basket{
+    position: fixed;
+    right: 0;
+    top: 0;
+    border: 1px solid white;
+    width: 120px;
+    height: 60px;
+
+}
+#products{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    width: 90%;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    width: 240px;
+    height: 240px;
+    margin: 10px 20px;
+}
+.item > p {
+    width: 100%;
+    text-align: center;
+}
