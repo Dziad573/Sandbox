@@ -18,6 +18,7 @@ body, html{
     position: relative;
 }
 #basket{
+    background-color: rgb(70, 112, 112);
     position: fixed;
     right: 0;
     top: 0;
@@ -25,6 +26,10 @@ body, html{
     width: 120px;
     height: 60px;
 
+}
+#move{
+    display: none;
+    text-align: center;
 }
 #products{
     display: flex;
