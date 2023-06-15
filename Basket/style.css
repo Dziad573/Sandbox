@@ -16,20 +16,25 @@ body, html{
     text-align: center;
     padding: 1em;
     position: relative;
+    font-size: clamp(11px, 1.5vw, 25px);
 }
 #basket{
-    background-color: rgb(70, 112, 112);
+    background-color: rgb(76, 105, 133);
     position: fixed;
+    padding: 10px 0px;
     right: 0;
     top: 0;
-    border: 1px solid white;
-    width: 120px;
+    width: 170px;
     height: 60px;
-
+    border: 1px solid white;
+    font-weight: bold;
+    height: auto;
 }
 #move{
     display: none;
     text-align: center;
+    font-size: 15px;
+    margin-top: 5px;
 }
 #products{
     display: flex;
@@ -47,7 +52,7 @@ body, html{
 }
 .item{
     /*backdrop-filter:brightness(70%);*/
-    position: relative;
+    position:relative;
     display: flex;
     flex-wrap: wrap;
     width: clamp(180px, 100%, 300px);
