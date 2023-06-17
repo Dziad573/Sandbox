@@ -12,7 +12,7 @@ body, html{
     background-color: black;
     color: whitesmoke;
 }
-#header{
+header{
     text-align: center;
     padding: 1em;
     position: relative;
@@ -29,12 +29,23 @@ body, html{
     border: 1px solid white;
     font-weight: bold;
     height: auto;
+    cursor: default;
+}
+#inBasket, #sum{
+    font-size: 15px;
+}
+#basket ul{
+    margin-left: -40px;
+    list-style: none;
 }
 #move{
     display: none;
     text-align: center;
     font-size: 15px;
     margin-top: 5px;
+}
+#sum{
+    display: none;
 }
 #products{
     display: flex;
@@ -86,4 +97,17 @@ body, html{
 .item > p {
     width: 100%;
     text-align: center;
+}
+.info{
+    position: absolute;
+    display: none;
+    bottom: 0;
+    left: 2px;
+    width: 100% - 5px;
+    height: 71%;
+    padding: 35% 5px 0px 5px;
+    border-radius: 2%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    justify-content: center;
 }
