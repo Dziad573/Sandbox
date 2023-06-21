@@ -318,12 +318,30 @@ button:active span:nth-child(1)
 #learn-more:hover .circle {
     width: 100%;
 }
-
 #learn-more:hover .circle .icon.arrow {
     background: #ffffff;
     transform: translate(1rem, 0);
 }
-
 #learn-more:hover .button-text {
     color: #ffffff;
+}
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    cursor: pointer;
+}
+.upload-container:hover {
+    background-color: #6464648e;
+}
+.upload-container p {
+    margin: 0;
+}
+
+#file-input {
+    display: none;
 }

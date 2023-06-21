@@ -72,7 +72,41 @@
             <span class="button-text">Learn More</span>
         </button>
     </div>
-    
+
+    <div class="upload-container" ondrop="handleDrop(event)" ondragover="handleDragOver(event)" onclick="handleFileSelect()">
+        <p>Kliknij tutaj lub przeciągnij plik na obszar powyżej, aby go przesłać.</p>
+        <input type="file" id="file-input" multiple>
+    </div>
+
+<script>
+    function handleFileSelect() {
+        const fileInput = document.getElementById('file-input');
+        fileInput.click();
+    }
+
+    function handleFiles(files) {
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        console.log('Nazwa pliku:', file.name);
+        console.log('Typ pliku:', file.type);
+        console.log('Rozmiar pliku:', file.size, 'bajtów');
+    }}
+
+    function handleDragOver(event) {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+    }
+
+    function handleDrop(event) {
+    event.preventDefault();
+    handleFiles(event.dataTransfer.files);
+    }
+
+    const fileInput = document.getElementById('file-input');
+    fileInput.addEventListener('change', (event) => {
+    handleFiles(event.target.files);
+    });
+</script>
 
 </body>
 </html>
