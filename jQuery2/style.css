@@ -1,13 +1,15 @@
 html{
-    background-image: url("Moon.svg");
+    background-image: url("martin-martz-F2DQp01lIDo-unsplash.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
-    background-position:top;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode:lighten;
+    background-attachment: fixed;
     /*background-color: rgb(5, 2, 19);*/
     overflow-x: hidden;
     scroll-behavior: smooth;
     box-sizing: border-box;
-    height: 140%;
+    height: 120%;
     line-height: 1.5;
 }
 html, body{
@@ -22,12 +24,17 @@ html, body{
 }
 #form{
     position: absolute;
+    background-image: url("Moon.svg");
+    background-repeat: no-repeat;
+    background-blend-mode: color-burn;
+    background-position:left top;
+    background-size: 600px;
     background-color: #c5c6c7af;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: clamp(300px, 50%, 600px);
-    height: 200px;
+    height: 275px;
     border: 2px solid #66fcf1;
     border-radius: 25px;
     text-align: center;
@@ -54,7 +61,8 @@ input{
 input:hover{
     background-color: #ccfcf9;
 }
-input:focus{
+input.contact:focus{
     outline: 0;
     background-color: #acfffb;
 }
+
