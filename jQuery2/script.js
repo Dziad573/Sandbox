@@ -21,7 +21,18 @@ $(document).ready(function(){
         localStorage.setItem("#" + idOfForm + "input[data-type='"+type+"']", $(this).val());
     });
 
-    $("input[type='submit']").on("click", function(){
+    $("form input[type='submit']").on("click", function(evt){
+
+        evt.preventDefault();
+
+        $("input.stored", evt.target.parentNode).each(function(){
+            var form = $(this).parent();
+            var idOfForm = form.attr("id");
+            var type = $(this).data("type");
+            localStorage.removeItem("#" + idOfForm + "input[data-type='"+type+"']");
+            $("#" + idOfForm + "input[data-type='"+type+"']").val('');
+        });
+
         var name = $("input[data-type='name']").val();
         var eMail = $("input[data-type='E-mail']").val();
         var tel = $("input[data-type='tel']").val();
