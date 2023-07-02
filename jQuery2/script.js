@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    var worker = new Worker("task.js");
+    worker.postMessage("test");
+    worker.onmessage = function(e){
+        alert(e.data);
+    };
 
     function init(){
         $("form input.stored").each(function(){
