@@ -1,10 +1,13 @@
 function countDown(countFrom){
-    postMessage(countFrom--);
+    postMessage(countFrom);
+    countFrom--;
     if(countFrom < 0){
         postMessage("end");
         return;
     };
-    setTimeout("countDown(" + countFrom + ")", 1000);
+    setTimeout(function() {
+        countDown(countFrom);
+    }, 1000);
 };
 
 self.onmessage = function(e){
@@ -15,4 +18,4 @@ self.onmessage = function(e){
         default:
             postMessage("error");
     }
-}
+};

@@ -1,9 +1,17 @@
 $(document).ready(function(){
     var worker = new Worker("task.js");
-    worker.postMessage("test");
+    
     worker.onmessage = function(e){
-        alert(e.data);
-    };
+        if(e.data != "end");
+        $("#counter").html(e.data);
+    }
+    $("#start-counting").on("click", function(){
+        var countFrom = $("#count-from").val();
+        worker.postMessage({
+            'cmd': 'start',
+            'count-from': countFrom
+        });
+    });
 
     function init(){
         $("form input.stored").each(function(){
