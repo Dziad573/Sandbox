@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Cache</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+                console.log('Service Worker zarejestrowany zasięg:', registration.scope);
+            })
+            .catch(function(error) {
+                console.log('Błąd rejestracji Service Workera:', error);
+            });
+        }
+    </script>
+</head>
+<body>
+    <img src="thumb-1920-1079747.png" alt="pepoza" width="400px">
+    <script src="script.js"></script>
+</body>
+</html>
