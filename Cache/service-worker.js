@@ -4,7 +4,6 @@ self.addEventListener('install', function(event) {
     event.waitUntil(
         caches.open(CACHE_NAME).then(function(cache) {
             return cache.addAll([
-                'thumb-1920-1079747.png',
                 'style.css'
             ]);
         })

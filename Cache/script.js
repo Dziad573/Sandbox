@@ -29,4 +29,18 @@ $(document).ready(function(){
     function countOffsetY(event, object){
         return event.pageY - object.offset().top;
     }
-});
+
+    $("header > span").on("click", function(){
+        $("#hide").slideToggle();
+        
+        var buttonText = $("header > span").text();
+        if (buttonText === "hide") {
+            $("header > span").text("more");
+        } else {
+            $("header > span").text("hide");
+        }
+
+    })
+
+
+})
