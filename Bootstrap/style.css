@@ -24,7 +24,6 @@ body{
 header{
     width: 100%;
     position:fixed;
-    display:contents;
     background-color: var(--primary-color);
 }
 [class*="col"]{
@@ -44,7 +43,7 @@ div button:not(:first-child), div button:last-child{
     background-color: var(--hover-color);
 }
 section #main-text{
-    padding: 10em 0 1em 0;
+    padding: 12em 0 1em 0;
 }
 /*.light-left{
     position: absolute;
@@ -71,7 +70,32 @@ section #main-text{
 #register-section{
     margin-top: 7em;
 }
+.register-block{
+    padding: 0 5%;
+}
 .register-form{
-    min-width: 400px;
-    max-width: 740px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    min-width: 340px;
+    max-width: 700px;
+}
+.some{
+    position: relative;
+    height: 1200px;
+    width: 100%;
+    background-color: var(--primary-color);
+    border: 2px solid white;
+}
+.element-right{
+    position: absolute;
+    top: 6em;
+    right: 2em;
+    border-radius: 2em;
+}
+.element-left{
+    position: absolute;
+    top: 6em;
+    left: 2em;
+    border-radius: 2em;
 }
