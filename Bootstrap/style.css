@@ -1,0 +1,77 @@
+:root{
+    --primary-color: rgb(22, 22, 22);
+    --hover-color: rgba(153, 153, 153, 0.432);
+
+}
+html{
+    background-blend-mode:lighten;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    height: 120%;
+    line-height: 1.5;
+}
+body{
+    /*background-color: var(--primary-color);*/
+    margin: 0px;
+    min-height: 100%;
+    color: whitesmoke;
+}
+.container-fluid{
+    background-color: var(--primary-color);
+}
+header{
+    width: 100%;
+    position:fixed;
+    display:contents;
+    background-color: var(--primary-color);
+}
+[class*="col"]{
+    background-color: var(--primary-color);
+
+}
+div button:not(:first-child), div button:last-child{
+    padding-top: .8em 1em;
+}
+#about{
+    margin-top: 7px;
+}
+.btn, .btn:hover{
+    color: white;
+}
+.btn:hover{
+    background-color: var(--hover-color);
+}
+section #main-text{
+    padding: 10em 0 1em 0;
+}
+/*.light-left{
+    position: absolute;
+    text-align: start;
+    top: 20em;
+    left: 10%;
+}
+.light-right{
+    position: absolute;
+    text-align:right;
+    top: 60em;
+    right: 25%;
+    
+}
+.light::before{
+    content:"";
+    position: absolute;
+    background-image: radial-gradient(50% 50% at 50% 50%, rgb(92, 12, 138) 100%, #9c3af8cb 10%);
+    filter: blur(130px);
+    width: 250px;
+    height: 250px;
+}*/
+
+#register-section{
+    margin-top: 7em;
+}
+.register-form{
+    min-width: 400px;
+    max-width: 740px;
+}

@@ -34,6 +34,9 @@ header{
     background-color: rgb(10, 8, 31);
     text-align: center;
 }
+span{
+    cursor: pointer;
+}
 canvas{
     position: absolute;
     left: 50%;
