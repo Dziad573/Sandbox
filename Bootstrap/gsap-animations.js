@@ -2,7 +2,7 @@ $(document).ready(function(){
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
     
 
-    document.querySelectorAll("header .nav .col-9 button:not(:first-child)").forEach((btn, index) => {
+    document.querySelectorAll("header .nav .col-9 button").forEach((btn, index) => {
         btn.addEventListener("click", () => {
         gsap.to(window, {
             duration: .2, 
@@ -99,4 +99,60 @@ $(document).ready(function(){
         );
     });
 
+    const text = document.querySelectorAll('#text-fade');
+    text.forEach((element) => {
+        gsap.fromTo(element,
+            {
+                duration: 1,
+                color: "red",
+            },
+            {
+                duration: 1,
+                color: "blue",
+                repeat: -1,
+                yoyo: true,
+            }
+        );
+    });
+    
+    const aboutText = document.querySelectorAll(".aboutt > div");
+    aboutText.forEach((el) => {
+        gsap.to(el, {
+            duration: 1,
+            color: "red",
+            scrollTrigger: {
+                trigger: el,
+                scrub: true,
+                start: "-=100px center",
+                end: "120px 80%",
+                markers: true,
+                onScrubComplete: () => {
+                    innaFunkcja(el);
+                }
+            }
+        });
+    });
+    
+    function innaFunkcja(el) {
+        gsap.to(el, {
+            duration: 1,
+            color: "blue"
+        });
+    }
+
+    gsap.to("text", {
+        duration: 0.75,
+        y: [-80, 80],
+        rotation: [-30, 20, 30, -20],
+        ease: "back.inOut",
+        stagger: {
+            from: "center",
+            amount: 0.2
+        },
+        scale: 1.5,
+        transformOrigin: "center center",
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 0.5
+    });
 });

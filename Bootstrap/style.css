@@ -113,3 +113,26 @@ section #main-text{
     text-shadow: 0px 0px 21px rgb(241, 41, 41);
     overflow-wrap: break-word;
 }
+.about{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    align-content: center;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+    word-wrap: break-word;
+}
+.about>div{
+    width:100%;
+    padding: .3em;
+}
+#section4>div>img{
+    width: clamp(300px, 40%, 660px);
+}
+svg {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 50%;
+    overflow: visible;
+}
