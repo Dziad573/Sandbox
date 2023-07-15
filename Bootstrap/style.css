@@ -79,7 +79,7 @@ section #main-text{
     align-content: center;
     justify-content: center;
     min-width: 340px;
-    max-width: 700px;
+    max-width: 880px;
 }
 .some{
     position: relative;
@@ -113,7 +113,7 @@ section #main-text{
     text-shadow: 0px 0px 21px rgb(241, 41, 41);
     overflow-wrap: break-word;
 }
-.about{
+.about-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -121,17 +121,16 @@ section #main-text{
     align-content: center;
     font-size: clamp(1rem, 2.5vw, 3rem);
     word-wrap: break-word;
+    color: rgba(197, 197, 197, 0.808);
 }
-.about>div{
+.about-container>div{
     width:100%;
     padding: .3em;
 }
-#section4>div>img{
+div>img{
     width: clamp(300px, 40%, 660px);
 }
 svg {
-    width: auto;
-    height: auto;
     max-width: 90%;
     max-height: 50%;
     overflow: visible;

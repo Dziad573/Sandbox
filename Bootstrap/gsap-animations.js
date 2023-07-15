@@ -115,7 +115,7 @@ $(document).ready(function(){
         );
     });
     
-    const aboutText = document.querySelectorAll(".aboutt > div");
+    const aboutText = document.querySelectorAll(".about-container > div");
     aboutText.forEach((el) => {
         gsap.to(el, {
             duration: 1,
@@ -135,24 +135,23 @@ $(document).ready(function(){
     
     function innaFunkcja(el) {
         gsap.to(el, {
-            duration: 1,
-            color: "blue"
+            color: "rgba(197, 197, 197, 0.808)"
         });
     }
 
     gsap.to("text", {
         duration: 0.75,
-        y: [-80, 80],
-        rotation: [-30, 20, 30, -20],
+        y: [-80],
+        rotation: [-30], // Poprawione wartości rotacji w stopniach
         ease: "back.inOut",
         stagger: {
-            from: "center",
-            amount: 0.2
+          from: "center",
+          amount: 0.2
         },
         scale: 1.5,
         transformOrigin: "center center",
         yoyo: true,
         repeat: -1,
         repeatDelay: 0.5
-    });
+      });
 });
