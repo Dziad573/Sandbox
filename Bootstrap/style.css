@@ -126,9 +126,13 @@ section #main-text{
 .about-container>div{
     width:100%;
     padding: .3em;
+    background: #808080d2;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 div>img{
     width: clamp(300px, 40%, 660px);
+    height: auto;
 }
 svg {
     max-width: 90%;

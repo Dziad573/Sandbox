@@ -119,8 +119,8 @@ $(document).ready(function(){
     aboutText.forEach((el) => {
         gsap.to(el, {
             duration: 1,
-            color: "red",
-            scrollTrigger: {
+            background: "radial-gradient(ellipse farthest-corner at center center, #BA2929 3%, #7323A8 90%)",
+                scrollTrigger: {
                 trigger: el,
                 scrub: true,
                 start: "-=100px center",
@@ -139,19 +139,49 @@ $(document).ready(function(){
         });
     }
 
-    gsap.to("text", {
+    gsap.to("text.t", {
         duration: 0.75,
-        y: [-80],
-        rotation: [-30], // Poprawione wartości rotacji w stopniach
+        y: [-40],
+        rotation: [-30],
         ease: "back.inOut",
         stagger: {
-          from: "center",
-          amount: 0.2
+            from: "center",
+            amount: 0.2
         },
-        scale: 1.5,
+        scale: 1.7,
         transformOrigin: "center center",
         yoyo: true,
         repeat: -1,
         repeatDelay: 0.5
-      });
+    });
+    gsap.to("text.tt", {
+        duration: 0.75,
+        y: [+40],
+        rotation: [+30],
+        ease: "back.inOut",
+        stagger: {
+            from: "center",
+            amount: 0.2
+        },
+        scale: 1.7,
+        transformOrigin: "center center",
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 0.5
+    });
+    gsap.to("text.ttt", {
+        duration: 0.75,
+        y: [-40],
+        rotation: [+30],
+        ease: "back.inOut",
+        stagger: {
+            from: "center",
+            amount: 0.2
+        },
+        scale: 1.7,
+        transformOrigin: "center center",
+        yoyo: true,
+        repeat: -1,
+        repeatDelay: 0.5
+    });
 });
