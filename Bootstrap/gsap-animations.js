@@ -116,28 +116,26 @@ $(document).ready(function(){
     });
     
     const aboutText = document.querySelectorAll(".about-container > div");
+
     aboutText.forEach((el) => {
-        gsap.to(el, {
-            duration: 1,
-            background: "radial-gradient(ellipse farthest-corner at center center, #BA2929 3%, #7323A8 90%)",
-                scrollTrigger: {
+    const gradientDiv = el.querySelector(".gradient-div");
+
+        gsap.to(gradientDiv, {
+            scrollTrigger: {
                 trigger: el,
                 scrub: true,
                 start: "-=100px center",
                 end: "120px 80%",
                 markers: true,
-                onScrubComplete: () => {
-                    innaFunkcja(el);
-                }
-            }
+                onEnter: () => {
+                    gradientDiv.classList.add("gradient-text");
+                },
+                onLeaveBack: () => {
+                    gradientDiv.classList.remove("gradient-text");
+                },
+            },
         });
     });
-    
-    function innaFunkcja(el) {
-        gsap.to(el, {
-            color: "rgba(197, 197, 197, 0.808)"
-        });
-    }
 
     gsap.to("text.t", {
         duration: 0.75,
