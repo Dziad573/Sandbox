@@ -47,25 +47,57 @@
                 $("#wynik").text("Zaznaczone: " + ilosc);
             }
         }
-    )
+    );
 
     $("#losuj").click(
         function(){
             var min = parseInt($("#liczba1").val());
             var max = parseInt($("#liczba2").val());
-
+    
             function losujLiczbe(min, max) {
                 var zakres = max - min + 1;
                 var wylosowanaLiczba = Math.floor(Math.random() * zakres) + min;
                 return wylosowanaLiczba;
         }
             var wylosowana = losujLiczbe(min, max);
-
+    
             $('#result').text('Wylosowana liczba: ' + wylosowana); 
-            e.preventDefault();
+            e.preventDefault()
             }
     )
     
+    startRotation();
 
+    function startRotation() {
+        rotateImg();
+        setInterval(rotate, 2000);
+    }
+
+    function rotateImg() {
+        var firstImg = $(".imgs-to-rotate > img:first-child");
+        firstImg.addClass("current").css("opacity", 1);
+    }
+
+    function rotate() {
+        var current = $(".current");
+
+        current.animate(
+            {
+                opacity: 0,
+            },
+            1000,
+            function () {
+                $(this).css("display", "none").removeClass("current").css("opacity", 1);
+
+                var nextImg = $(this).next();
+                if (!nextImg.length) {
+                    nextImg = $(".imgs-to-rotate > img:first-child");
+                }
+                nextImg.css("display", "block").addClass("current");
+            }
+        );
+    }
+    
 });
+
 
